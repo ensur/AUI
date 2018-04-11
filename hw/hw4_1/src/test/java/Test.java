@@ -1,8 +1,6 @@
 import category.Test_group_eq;
 import category.Test_group_is;
 import category.Test_group_rec;
-import org.junit.After;
-import org.junit.Before;
 import org.junit.experimental.categories.Category;
 
 import static org.junit.Assert.assertTrue;
@@ -11,16 +9,8 @@ import static org.junit.Assert.assertTrue;
 public class Test {
     Trangle test = new Trangle();
 
-    @Before
-    public void initTest(){
 
 
-    }
-
-    @After
-    public void afterTest(){
-        test = null;
-    }
     @Category(Test_group_eq.class)//тут мы добавляем категории для того чтобы в POM могли поменять конфигурацию
     //и запустить нужную нам, для этого и создали интерфейсы для каждого теста
     @org.junit.Test

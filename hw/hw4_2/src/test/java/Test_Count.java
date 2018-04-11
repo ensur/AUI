@@ -1,4 +1,5 @@
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -24,10 +25,11 @@ public class Test_Count {
         int[] mas = {333, 33, 3, 3333, 0000};
         assertThat( count.getThreeNumberCount(mas), is(10));
     }
-    @Test
+    @Test(expected = ArithmeticException.class)
     public void negative_1(){
         int[] mas = {0003, 0, 3*11/0,0000};
         assertThat( count.getThreeNumberCount(mas), is(1));
+        Assert.fail("excepted ArithmeticException exception");
     }
     @Test
     public void negative_2(){

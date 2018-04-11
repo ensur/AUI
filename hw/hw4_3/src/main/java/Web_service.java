@@ -1,15 +1,15 @@
 public class Web_service {// класс саглушка
 
     public String getUserEmail(int id){//методы заглушки
-        return getUserEmail(id);
+        return "";
 
     }
     public String getCurrentUrl(){
-        return getCurrentUrl();
+    return "";
 
     }
-    public Boolean isRegisteredUser(String email){
-        return isRegisteredUser(email);
+    public boolean isRegisteredUser(String email){
+    return false;
 
     }
 }
