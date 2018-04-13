@@ -36,33 +36,8 @@
         </dependency>
 
     </dependencies>
-    <profiles>
-            <profile>
-                    <id>eq</id>
     <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.20.1</version>
-                <configuration>
-                    <forkCount>1</forkCount>
-                    <reuseForks>true</reuseForks>
-                    <parallel>all</parallel>
-                    <perCoreThreadCount>false</perCoreThreadCount>
-                    <useUnlimitedThreads>true</useUnlimitedThreads>
-                    <threadCountMethods>5</threadCountMethods>
-                    <argLine>-Xms1024m -Xmx9216m -Dfile.encoding=UTF-8</argLine>
-                    <systemPropertyVariables>
-                        <result.directory>${project.build.directory}/results/</result.directory>
-                        <target.directory>${project.build.directory}</target.directory>
-                        <logs.directory>${project.build.directory}/logs/</logs.directory>
-                    </systemPropertyVariables>
-                    <groups>category.Test_group_eq</groups>
-                    <!--- or  <groups>category.Test_group_is</groups> - соответственно конфигураторы для запуска разных тестов-->
-                    <!--- or  <groups>category.Test_group_rec</groups> -->
-                </configuration>
-            </plugin>
+    <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -71,80 +46,76 @@
                     <!-- put your configurations here -->
                 </configuration>
             </plugin>
-        </plugins>
-    </build>
+                <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>2.20.1</version>
+                        <configuration>
+                            <forkCount>1</forkCount>
+                            <reuseForks>true</reuseForks>
+                            <parallel>all</parallel>
+                            <perCoreThreadCount>false</perCoreThreadCount>
+                            <useUnlimitedThreads>true</useUnlimitedThreads>
+                            <threadCountMethods>5</threadCountMethods>
+                            <argLine>-Xms1024m -Xmx9216m -Dfile.encoding=UTF-8</argLine>
+                            <systemPropertyVariables>
+                                <result.directory>${project.build.directory}/results/</result.directory>
+                                <target.directory>${project.build.directory}</target.directory>
+                                <logs.directory>${project.build.directory}/logs/</logs.directory>
+                            </systemPropertyVariables>
+
+                        </configuration>
+                    </plugin>
+
+                </plugins>
+            </build>
+   <profiles>
+    <profile>
+        <id>eq</id>
+        <build>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>2.20.1</version>
+                    <configuration>
+                        <groups>category.Test_group_eq</groups>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </build>
     </profile>
-        <profile>
-            <id>is</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-surefire-plugin</artifactId>
-                        <version>2.20.1</version>
-                        <configuration>
-                            <forkCount>1</forkCount>
-                            <reuseForks>true</reuseForks>
-                            <parallel>all</parallel>
-                            <perCoreThreadCount>false</perCoreThreadCount>
-                            <useUnlimitedThreads>true</useUnlimitedThreads>
-                            <threadCountMethods>5</threadCountMethods>
-                            <argLine>-Xms1024m -Xmx9216m -Dfile.encoding=UTF-8</argLine>
-                            <systemPropertyVariables>
-                                <result.directory>${project.build.directory}/results/</result.directory>
-                                <target.directory>${project.build.directory}</target.directory>
-                                <logs.directory>${project.build.directory}/logs/</logs.directory>
-                            </systemPropertyVariables>
-                            <groups>category.Test_group_is</groups>
-                        </configuration>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-compiler-plugin</artifactId>
-                        <version>3.5.1</version>
-                        <configuration>
-                            <!-- put your configurations here -->
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-        <profile>
-            <id>rec</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-surefire-plugin</artifactId>
-                        <version>2.20.1</version>
-                        <configuration>
-                            <forkCount>1</forkCount>
-                            <reuseForks>true</reuseForks>
-                            <parallel>all</parallel>
-                            <perCoreThreadCount>false</perCoreThreadCount>
-                            <useUnlimitedThreads>true</useUnlimitedThreads>
-                            <threadCountMethods>5</threadCountMethods>
-                            <argLine>-Xms1024m -Xmx9216m -Dfile.encoding=UTF-8</argLine>
-                            <systemPropertyVariables>
-                                <result.directory>${project.build.directory}/results/</result.directory>
-                                <target.directory>${project.build.directory}</target.directory>
-                                <logs.directory>${project.build.directory}/logs/</logs.directory>
-                            </systemPropertyVariables>
-
-
-                            <groups>category.Test_group_rec</groups>
-                        </configuration>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-compiler-plugin</artifactId>
-                        <version>3.5.1</version>
-                        <configuration>
-                            <!-- put your configurations here -->
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
+       <profile>
+           <id>is</id>
+           <build>
+               <plugins>
+                   <plugin>
+                       <groupId>org.apache.maven.plugins</groupId>
+                       <artifactId>maven-surefire-plugin</artifactId>
+                       <version>2.20.1</version>
+                       <configuration>
+                           <groups>category.Test_group_is</groups>
+                       </configuration>
+                   </plugin>
+               </plugins>
+           </build>
+       </profile>
+       <profile>
+           <id>rec</id>
+           <build>
+               <plugins>
+                   <plugin>
+                       <groupId>org.apache.maven.plugins</groupId>
+                       <artifactId>maven-surefire-plugin</artifactId>
+                       <version>2.20.1</version>
+                       <configuration>
+                           <groups>category.Test_group_rec</groups>
+                       </configuration>
+                   </plugin>
+               </plugins>
+           </build>
+       </profile>
 </profiles>
+
+
 </project>

@@ -1,11 +1,11 @@
 public class Web_service {// класс саглушка
 
-    public String getUserEmail(int id){//методы заглушки
-        return "";
+    public String getUserEmail(Integer id){//методы заглушки
+        return null;
 
     }
     public String getCurrentUrl(){
-    return "";
+    return null;
 
     }
     public boolean isRegisteredUser(String email){
