@@ -1,5 +1,6 @@
 import org.junit.Test;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 public class Test_Shift {
@@ -18,18 +19,18 @@ public class Test_Shift {
     public void TestShiftPositive3(){
         assertTrue("Неверные данные",shift.testShift("^%#@", "@#^%"));
     }
-    @Test(expected = AssertionError.class)
+    @Test
     public void TestShiftNegative1(){
-        assertTrue("Неверные данные",shift.testShift("abcdeg ", "ed cba"));
+        assertFalse(shift.testShift("abcdeg ", "ed cba"));
     }
-    @Test(expected = AssertionError.class)
+    @Test
     public void TestShiftNegative2(){
-        assertTrue("Неверные данные",shift.testShift("abc^%^&$(*deg ", "ed cb&*$^#%a"));
+        assertFalse(shift.testShift("abc^%^&$(*deg ", "ed cb&*$^#%a"));
     }
 
-    @Test(expected = AssertionError.class)//ну и делаем тест с ожиданием эксепшена
+    @Test
     public void TestShiftNegative3(){
-            assertTrue("Неверные данные",shift.testShift("H", "#U+0048"));
+            assertFalse(shift.testShift("H", "#U+0048"));
     }
 
 

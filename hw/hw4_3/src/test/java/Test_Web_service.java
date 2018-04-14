@@ -19,7 +19,7 @@ public class Test_Web_service {
     @Test
     public void getUserEmailNegative(){
         when(service.getUserEmail(1)).thenReturn("sample@mail.com");
-        assertNotEquals(service.getUserEmail(1), "mymale@mail.com");
+        assertNotEquals(service.getUserEmail(null), "sample@mail.com");
     }
     @Test
     public void getCurrentUrlPositive(){
@@ -41,7 +41,7 @@ public class Test_Web_service {
     @Test
     public void isRegisteredUserNegative(){
         when(service.isRegisteredUser("sample@mail.com")).thenReturn(true);
-        assertEquals(service.isRegisteredUser("samplefake@mail.com"), false);
+        assertEquals(service.isRegisteredUser(null), false);
 
     }
 

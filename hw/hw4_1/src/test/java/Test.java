@@ -28,7 +28,7 @@ public class Test {
 
     }
     @Category(Test_group_rec.class)
-    @org.junit.Test(expected = AssertionError.class)
+    @org.junit.Test
     public void findRec(){
 
        assertTrue("Треугольник не прямоугольный",(Math.pow(test.l1,2)==(Math.pow(test.l2,2)+Math.pow(test.l3,2)))||(Math.pow(test.l2,2)==(Math.pow(test.l1,2)+Math.pow(test.l3,2)))||(Math.pow(test.l3,2)==(Math.pow(test.l2,2)+Math.pow(test.l1,2))));
