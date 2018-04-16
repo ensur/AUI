@@ -23,6 +23,7 @@
         </dependency>
 
     </dependencies>
+
     <build>
         <plugins>
             <plugin>
@@ -39,6 +40,8 @@
                     <argLine>-Xms1024m -Xmx9216m -Dfile.encoding=UTF-8</argLine>
 
                     <systemPropertyVariables>
+                       <url>https://pets.mail.ru</url>
+
                         <result.directory>${project.build.directory}/results/</result.directory>
                         <target.directory>${project.build.directory}</target.directory>
                         <logs.directory>${project.build.directory}/logs/</logs.directory>
@@ -50,6 +53,7 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.5.1</version>
                 <configuration>
+
                     <!-- put your configurations here -->
                     <source>1.8</source>
                     <target>1.8</target>

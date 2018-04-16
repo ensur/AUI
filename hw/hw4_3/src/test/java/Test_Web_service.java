@@ -27,11 +27,7 @@ public class Test_Web_service {
         when(service.getCurrentUrl()).thenReturn("https://sample.url.com");
         assertEquals(service.getCurrentUrl(), "https://sample.url.com");
     }
-    @Test
-    public void getCurrentUrlNegative(){
-        when(service.getCurrentUrl()).thenReturn("https://sample.url.com");
-        assertNotEquals(service.getCurrentUrl(), "https://sample.Fakeurl.com");
-    }
+
     @Test
     public void isRegisteredUserPositive(){
         when(service.isRegisteredUser("sample@mail.com")).thenReturn(true);

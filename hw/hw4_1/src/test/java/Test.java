@@ -14,14 +14,14 @@ public class Test {
     @Category(Test_group_eq.class)//тут мы добавляем категории для того чтобы в POM могли поменять конфигурацию
     //и запустить нужную нам, для этого и создали интерфейсы для каждого теста
 
-    @org.junit.Test(expected = AssertionError.class)
+    @org.junit.Test
     public void findEq(){
 
     assertTrue("Треугольник не равнобедренный",(test.l1==test.l2)||(test.l2==test.l3));
 
     }
     @Category(Test_group_is.class)
-    @org.junit.Test(expected = AssertionError.class)
+    @org.junit.Test
     public void findIs(){
 
            assertTrue("Треугольник не равносторонний",(test.l1 == test.l2) && (test.l1 == test.l3) && (test.l2 == test.l3));

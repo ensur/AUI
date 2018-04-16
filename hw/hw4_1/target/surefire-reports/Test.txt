@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: Test
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in Test
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.016 s <<< FAILURE! - in Test
+findIs(Test)  Time elapsed: 0.016 s  <<< FAILURE!
+java.lang.AssertionError: Треугольник не равносторонний
+	at Test.findIs(Test.java:27)
+
