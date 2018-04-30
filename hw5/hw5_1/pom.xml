@@ -40,11 +40,12 @@
                     <argLine>-Xms1024m -Xmx9216m -Dfile.encoding=UTF-8</argLine>
 
                     <systemPropertyVariables>
-                       <url>https://pets.mail.ru</url>
-
-                        <result.directory>${project.build.directory}/results/</result.directory>
+                        <url>https://pets.mail.ru</url>
+                        <path>C:\track\track\hw5\hw5_1\results.txt</path>
+                        <result.directory>${project.build.directory}/result/</result.directory>
                         <target.directory>${project.build.directory}</target.directory>
                         <logs.directory>${project.build.directory}/logs/</logs.directory>
+                        <timeout>15</timeout>
                     </systemPropertyVariables>
                 </configuration>
             </plugin>

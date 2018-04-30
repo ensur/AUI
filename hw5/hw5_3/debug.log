@@ -1,0 +1,18 @@
+[0422/020112.534:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[0423/043641.750:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[0423/055531.270:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[0423/172645.250:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[0423/172922.553:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[0424/133524.504:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[0424/135155.492:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[0425/015633.677:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[0425/123803.025:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[0425/125726.673:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[0425/130929.099:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[0425/133719.121:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[0425/145950.858:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[0426/012548.389:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[0426/025057.174:ERROR:file_io_win.cc(161)] CreateFile C:\Users\user\AppData\Local\Temp\scoped_dir4708_13293\Crashpad\settings.dat: Системе не удается найти указанный путь. (0x3)
+[0426/025057.190:ERROR:file_io_win.cc(170)] CreateFile C:\Users\user\AppData\Local\Temp\scoped_dir4708_13293\Crashpad\reports\6561e4a7-aede-4499-b18e-dd9cf199c35c.dmp: Системе не удается найти указанный путь. (0x3)
+[0426/025057.190:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0426/065640.188:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
